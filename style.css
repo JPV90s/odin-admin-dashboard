@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box
+}
+
+
+img {
+    height: 25px;
+    padding: 0px 15px;
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
+    font-size: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content";
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    z-index: 1;
+    box-shadow: 1px 2px 5px gray;
+}
+
+.header-top {
+    display: flex;
+    padding: 20px 60px;
+    grid-area: header-top;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.header .header-top .search input {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(237, 225, 225);
+    border-radius: 50px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+}
+
+.header-bottom {
+    display: flex;
+    padding: 20px 60px;
+    grid-area: header-bottom;
+}
+
+.greetings {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
+    width: 40%;
+}
+
+.header-buttons button {
+    width: 25%;
+    height: 70%;
+    border-radius: 50px;
+    background-color: #457b9d;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    background-color: #1d3557;
+    font-size: 2rem;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+}
+
+.sidebar-items {
+    padding: 25px 30px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.other-items {
+    padding: 25px 30px;
+}
+
+.sidebar img {
+    filter: invert(1);
+}
+
+.logo > img {
+    height: 50px;
+    padding-left: 0px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+    gap: 35px;
+    background-color: #f1faee;
+    grid-area: main-content;
+    padding: 30px 60px;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    border-left: 10px solid #e63946;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 1.8rem;
+    background-color: white;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.announcements-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 30px 10px 30px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.announcement {
+    font-size: 1.6rem;
+    padding: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+.announcement:nth-child(3){
+    border-bottom: none;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.trending-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.title {
+    padding-bottom: 15px;
+}
+
+.lighter {
+    color: lightslategray;
+}
